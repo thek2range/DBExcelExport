@@ -4,7 +4,8 @@ import java.security.*;
 import javax.crypto.*;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
-import sun.misc.*;
+
+import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.codec.binary.Hex;
 
 public class AESencrp {
@@ -34,13 +35,13 @@ public class AESencrp {
 
     public static String encrypt(String Data) throws Exception {
         byte[] encVal = encryptor.doFinal(Data.getBytes());
-        String encryptedValue = new BASE64Encoder().encode(encVal);
+        String encryptedValue = new Base64().encodeAsString(encVal);
         return encryptedValue;
     }
 
  public static String decrypt(String encryptedData) throws Exception {
 
-        byte[] decordedValue = new BASE64Decoder().decodeBuffer(encryptedData);
+        byte[] decordedValue = new Base64().decode(encryptedData);
         byte[] decValue = decryptor.doFinal(decordedValue);
         String decryptedValue = new String(decValue);
         return decryptedValue;
