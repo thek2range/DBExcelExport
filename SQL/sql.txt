@@ -1,0 +1,16 @@
+	CREATE TABLE Persons (
+    PersonID int,
+    Name varchar(255),
+    username varchar(255),
+    password varchar(255),
+    City varchar(255)
+);
+
+INSERT INTO Persons (PersonID, Name, username, password, City)  VALUES (1, 'Sachin Ramesh Tendulkar', 'sachin11', '668FzJ5XcbOc38AnW2TvCA==', 'Mumbai');
+INSERT INTO Persons (PersonID, Name, username, password, City)  VALUES (2, 'Sourav Ganguly', 'ganguly08', 'TSAN2jeOYp62WTmqnW2gwg==', 'Kolkata');
+INSERT INTO Persons (PersonID, Name, username, password, City)  VALUES (3, 'Virat K', 'ViratK', 'khl5e5xy9hBuJFhCm/FmNg==', 'Maharastra');
+INSERT INTO Persons (PersonID, Name, username, password, City)  VALUES (4, 'Kapil Dev', 'kapild', 'Ez+G924mgAOLuKHm2ttVowttafA00Zt2LyLJlnFC0UA=', 'Hariyana');
+
+
+
+select * from persons;
